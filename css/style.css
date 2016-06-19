@@ -1,5 +1,5 @@
 #onePage {
-    height: 100vh;
+    position: absolute;
     display: block;
 }
 
@@ -8,7 +8,6 @@
     color: white;
     position: relative;
 }
-
 
 #writeNote {
     display: none;
@@ -20,15 +19,132 @@
 }
 
 .intro-header {
-	  background-image: url('../img/84e36d1e966b783101d65d3bb7e1d745.jpg');
+    background-color: #808080;
+    background: no-repeat center center;
+    background-attachment: scroll;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-bottom: 50px;
+}
+
+.intro-header .site-heading,
+.intro-header .post-heading,
+.intro-header .page-heading {
+    padding: 100px 0 50px;
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    .intro-header .site-heading,
+    .intro-header .post-heading,
+    .intro-header .page-heading {
+        padding: 150px 0;
+    }
+}
+
+.intro-header .site-heading,
+.intro-header .page-heading {
+    text-align: center;
+    height: 35vh;
+}
+
+.intro-header .site-heading h1,
+.intro-header .page-heading h1 {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-size: 50px;
+}
+
+.intro-header .site-heading .subheading,
+.intro-header .page-heading .subheading {
+    font-size: 24px;
+    line-height: 1.1;
+    display: block;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 10px 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .intro-header .site-heading h1,
+    .intro-header .page-heading h1 {
+        font-size: 80px;
+    }
+}
+
+.btn {
+    border-radius: 15px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 0;
+    padding: 15px 25px;
+}
+
+.btn-lg {
+    font-size: 24px;
+    font-family: open-sans;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    background-color: #0085a1;
+    border: 1px solid #0085a1;
+    color: white;
+}
+
+.pager {
+    margin: 20px 0 0;
+}
+
+.pager li > a,
+.pager li > span {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 15px 25px;
+    background-color: white;
+    border-radius: 0;
+}
+
+.pager li > a:hover,
+.pager li > a:focus {
+    color: white;
+    background-color: #0085a1;
+    border: 1px solid #0085a1;
+}
+
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+    color: #808080;
+    background-color: #404040;
+    cursor: not-allowed;
 }
 
 footer {
-    height: 15vh;
+    height: 10vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
 }
+
 .copyright {
     color: aliceblue
 }

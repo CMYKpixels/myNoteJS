@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Réseau Français des FabLabs - Participez au choix du logo de l'association !">
+    <meta name="author" content="RFFLabs">
+
+    <title>Réseau Français des FabLabs</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+<!--    <link href="css/clean-blog.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="/cover.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="http://use.edgefonts.net/lora:i4,i7,n7,n4:all;open-sans:n7,i7,n8,i8,i4,n3,i3,n4,n6,i6:all.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div class="site-wrapper">
+<div class="site-wrapper-inner">
+<div class="cover-container">
+
+<!-- HEADER -->
+<div class="masthead clearfix">
+    <div class="inner">
+      <h3 class="masthead-brand">myNotes.JS</h3>
+      <nav>
+        <ul class="nav masthead-nav">
+          <li class=""><a href="#">MyNotes</a></li>
+          <li><a href="#">Write</a></li>
+          <li><a href="#">Archived</a></li>
+        </ul>
+      </nav>
+    </div>
+</div>
+<!-- HEADER -->
+
+<!-- LOGIN SCREEN -->
+<div id="connection" class="inner cover">
+    <h1 class="cover-heading">Bienvenue</h1>
+    <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="username" class="sr-only">Name</label>
+        <input type="text" id="username" class="form-control" placeholder="username" required autofocus>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="password" required>
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <br/>
+        <button id="connect" class="btn btn-lg btn-success" type="submit">Sign in</button>
+    </form>
+</div>
+<!-- LOGIN SCREEN -->
+          
+<!-- MAIN SCREEN -->
+   
+<!--Note Creation-->
+<div id="main" class="container">
+    <div class="row">
+        <button id="createBtn" class="btn btn-primary">Créer une Note</button>
+        <div id="noteContainer">
+<!--Appended Notes go Here-->
+        </div>
+    </div>
+</div>
+<!--Note Writing-->
+<div id="writeNote" class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <input id="title" type="text" class="form-control" placeholder="Title">
+            <br/>
+            <textarea id="content" class="form-control" rows="10"></textarea>
+        </div>
+<!--validator-->
+<ul class="pager">
+    <li class="next" id="addNote">
+        <a href="#">Ajouter &rarr;</a>
+    </li>
+</ul>
+</div>
+</div>   
+   
+<!-- MAIN SCREEN -->
+<div class="mastfoot">
+<div class="inner">
+<footer>
+<div class="container">
+<div class="row">
+<div>
+<p class="copyright">Copyright &copy; CMYKpixels 2016</p>
+</div>
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <ul class="list-inline text-center">
+        <li>
+            <a href="#">
+                <span class="fa-stack fa-lg">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x "></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="fa-stack fa-lg">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="fa-stack fa-lg">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x"></i>
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+        
+        </div>
+    </div>
+</div>
+
+   
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- jQuery -->
+    <script src="/js/Dependancies/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/Dependancies/bootstrap.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/Dependancies/clean-blog.min.js"></script>
+    <script src="js//username.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/Users.js"></script>
+    <script src="js/Notes.js"></script>
+
+  </body>
+</html>

@@ -4,7 +4,7 @@ var mainUser
 $("#connect").click(function (event) {
     event.preventDefault();
     //Comparaison des credentials : mainUser est ma variable,
-    //User est ma Classe, new User crée un utilisateur avec en //paramètres les valeur des champs saisis pour les comparer
+    //User est ma Classe, new User crée un utilisateur avec en //paramètres les valeur des champs saisis //pour les comparer
     //avec les valeurs de l'objet généré par la fonction connect()
     mainUser = new User($("#username").val(), $('#password').val());
     //Si ils correspondent OK connecte l'utilisateur
@@ -13,7 +13,7 @@ $("#connect").click(function (event) {
         $('#main').fadeIn()
         $('#connection').fadeOut()
     } else {
-        alert("Mauvais mot de passe, putain !")
+        alert("Mauvais mot de passe, ta race !")
     }
 })
 
@@ -25,9 +25,10 @@ $("#createBtn").click(function (event) {
 
 var note
 $("#addNote").click(function () {
-    mainUser.addNote(note);
     note = new Note($('#title').val(), $('#content').val());
-    $('#main').fadeIn()
+    mainUser.addNote(note);
+    $('#createBtn').fadeIn()
+    $('#noteContainer').fadeIn()
     $('#writeNote').fadeOut()
 })
 
@@ -36,5 +37,16 @@ $("#addNote").click(function () {
 //mainUser.notes = [{note},{note},{note}]
 //$("li").click(function(){
 //var position = $("li").index(this);
-//mainUser.notes[position]=newNote("nouveau","contenu")
+//mainUser.notes[position]=addNote("nouveau","contenu")
 //})
+
+//function (data, textStatus) {
+//$.each(data, function (key, obj) {
+//console.log(obj);
+//$("#usersRow").append(
+//'<div class="thumbnail">' +
+//'<img src="'+obj.value+'" class="">' +
+//'<div class="caption"><h4 class="">'+obj.user+'</h4>' +
+//'<p class="">'+obj.description+'</p>' +
+//'<a href="#" class="btn btn-default btn-xs" role="button">'+obj.ID+'</a>' +
+//'</div></div></div>');
