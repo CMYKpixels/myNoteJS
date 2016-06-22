@@ -23,10 +23,12 @@ $("#createBtn").click(function (event) {
     $('#createBtn').fadeOut()
 })
 
-var note
+var note;
 $("#addNote").click(function () {
     note = new Note($('#title').val(), $('#content').val());
     mainUser.addNote(note);
+    mainUser.notes = [{note}];
+    $("")
     $('#createBtn').fadeIn()
     $('#noteContainer').fadeIn()
     $('#writeNote').fadeOut()
