@@ -1,38 +1,50 @@
 var mainUser
+$('#main').slideUp().hide();
+$('#writeNote').slideUp().hide();
+$('#editnote').slideUp().hide();
+
+$("#connect").click(function (event) {
     //event en parametre de fonction, evite le renvoie du formulaire
     //et empêche le rechargement de la page
-$("#connect").click(function (event) {
     event.preventDefault();
     //Comparaison des credentials : mainUser est ma variable,
     //User est ma Classe, new User crée un utilisateur avec en //paramètres les valeur des champs saisis //pour les comparer
     //avec les valeurs de l'objet généré par la fonction connect()
-    mainUser = new User($("#username").val(), $('#password').val());
+    var username = $("#username").val();
+    var password = $("#password").val();
+    mainUser = new User(username, password);
     //Si ils correspondent OK connecte l'utilisateur
+    mainUser.connect();
+
     if (mainUser.connect() == true) {
-    
-        $('#main').fadeIn()
-        $('#connection').fadeOut()
+        $('#connection').slideUp().hide(1000);
+        $('#main').slideDown().show(1000);
     } else {
-        alert("Mauvais mot de passe, ta race !")
+        $('.error').fadeIn().delay(500).addClass('alert alert-warning').html('Please enter a valid username or password');
     }
-})
+});
 
 $("#createBtn").click(function (event) {
     event.preventDefault();
-    $('#writeNote').fadeIn()
-    $('#createBtn').fadeOut()
-})
+    $('#notes').fadeOut().hide(500);
+    $('#writeNote').slideDown().show(1000);
+    $('#createBtn').slideUp().hide(1000);
+});
 
-var note;
-$("#addNote").click(function () {
-    note = new Note($('#title').val(), $('#content').val());
-    mainUser.addNote(note);
-    mainUser.notes = [{note}];
-    $("")
-    $('#createBtn').fadeIn()
-    $('#noteContainer').fadeIn()
-    $('#writeNote').fadeOut()
-})
+$("#addNote").click(function (event) {
+    event.preventDefault();
+    var title = $('#title').val();
+    var content = $('#content').val();
+
+    mainUser.addNote(title, content);
+
+    $('#writeNote').slideUp().hide(1000);
+    $('#notes').slideDown().show(1000);
+    $('#createBtn').slideDown().show(1000);
+
+    $('ul').append('<li class="clickable"><div class="title">'+title+'</div><p class="content">'+content+'</p></li>');
+
+});
 
 //mainUser.addNote(note);
 //mainUser.notes;

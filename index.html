@@ -2,43 +2,25 @@
 <html lang="en"> 
 <head> 
     <meta charset="utf-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <meta name="description" content="Réseau Français des FabLabs - Participez au choix du logo de l'association !"> 
-    <meta name="author" content="RFFLabs"> 
- 
     <title>JavaScript Note App</title> 
- 
     <!-- Bootstrap Core CSS --> 
     <link href="css/bootstrap.min.css" rel="stylesheet"> 
- 
     <!-- Custom CSS --> 
     <link href="css/clean-blog.css" rel="stylesheet"> 
     <link rel="stylesheet" href="cover.css"> 
-<!--       <link rel="stylesheet" href="signin.css">--> 
- 
+<!--<link rel="stylesheet" href="signin.css">--> 
     <link rel="stylesheet" href="css/style.css"> 
- 
     <!-- Custom Fonts --> 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <script src="http://use.edgefonts.net/lora:i4,i7,n7,n4:all;open-sans:n7,i7,n8,i8,i4,n3,i3,n4,n6,i6:all.js"></script> 
- 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --> 
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
-<!--[if lt IE 9]> 
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> 
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> 
-<![endif]--> 
- 
 </head> 
 <body> 
 <div id="appContainer" class="container"> 
 <div id="onePage" class="row"> 
-
 <!-- Page Header --> 
-<!-- Set your background image for this header on the line below. --> 
+<!--Set background for this header on the line below.--> 
 <header class="intro-header"> 
 <div class="container"> 
 <div class="row"> 
@@ -68,97 +50,88 @@
         <br/> 
         <button id="connect" class="btn btn-lg btn-success" type="submit">Sign in</button> 
     </form> 
+    <div class="error"></div>
 </div> 
 </div> 
 </div> 
 <!-- /.container --> 
  
 <!--Note Creation--> 
-<div id="main" class="container"> 
-    <div class="row"> 
-        <button id="createBtn" class="btn btn-primary">Créer une Note</button> 
-        <div id="noteContainer"> 
-            <!--Appended Notes go Here-->
-            <ul>
-                <li class = "noteList" id="notes">
-                    
-                </li>
-            </ul>
-        </div> 
-    </div> 
+<div id="main" class="container">  
+    <button id="createBtn" class="btn btn-primary">Créer une Note</button> 
+<!--Appended Notes go Here-->
+    <ul class = "noteList" id="notes"></ul>
 </div> 
+
 <!--Note Writing--> 
 <div id="writeNote" class="container"> 
-<div class="row"> 
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
-    <input id="title" type="text" class="form-control" placeholder="Title"> 
-    <br/> 
-    <textarea id="content" class="form-control" rows="5"></textarea> 
-</div> 
+    <div class="row"> 
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+            <input id="title" type="text" class="form-control" placeholder="Title"> 
+            <br/> 
+            <textarea id="content" class="form-control" rows="5"></textarea> 
+        </div> 
 <!--validator--> 
-<ul class="pager"> 
-    <li class="next" id="addNote"> 
-        <a id="addNote" href="#">Ajouter &rarr;</a> 
-    </li> 
-</ul> 
-</div> 
+        <ul class="pager"> 
+            <li class="next" class="addNote">  
+            </li> 
+        </ul> 
+        <button class="btn btn-lg" id="addNote" href="#">Ajouter &rarr;</button>
+    </div> 
 </div> 
 </header> 
 
-                <!-- Footer --> 
-<footer> 
-<div class="container"> 
-    <div class="row"> 
-        <div> 
-            <p class="copyright">Copyright &copy; CMYKpixels 2016</p> 
-        </div> 
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
-            <ul class="list-inline text-center"> 
-                <li> 
-                    <a href="#"> 
-                        <span class="fa-stack fa-lg"> 
-                <i class="fa fa-circle-thin fa-stack-2x"></i> 
-                <i class="fa fa-twitter fa-stack-1x "></i> 
-            </span> 
-                    </a> 
-                </li> 
-                <li> 
-                    <a href="#"> 
-                        <span class="fa-stack fa-lg"> 
-                <i class="fa fa-circle-thin fa-stack-2x"></i> 
-                <i class="fa fa-facebook fa-stack-1x"></i> 
-            </span> 
-                    </a> 
-                </li> 
-                <li> 
-                    <a href="#"> 
-                        <span class="fa-stack fa-lg"> 
-                <i class="fa fa-circle-thin fa-stack-2x"></i> 
-                <i class="fa fa-github fa-stack-1x"></i> 
-            </span> 
-                    </a> 
-                </li> 
-            </ul> 
-        </div> 
-    </div> 
 </div> 
-</footer> 
+<!-- End Row *** OnePage -->
 </div> 
-</div> 
-    <!--Page Container--> 
- 
- 
-    <!-- jQuery --> 
-    <script src="/js/Dependancies/jquery.js"></script> 
+<!-- Page Container *** AppContainer --> 
+<!-- jQuery --> 
+    <script src="js/Dependancies/jquery.js"></script> 
     <!-- Bootstrap Core JavaScript --> 
-    <script src="/js/Dependancies/bootstrap.min.js"></script> 
-    <!-- Custom Theme JavaScript --> 
-    <script src="/js/Dependancies/clean-blog.min.js"></script> 
+    <script src="js/Dependancies/bootstrap.min.js"></script> 
+<!-- Custom Theme JavaScript --> 
+    <script src="js/Dependancies/clean-blog.min.js"></script> 
     <script src="js//username.js"></script> 
     <script src="js/scripts.js"></script> 
     <script src="js/Users.js"></script> 
     <script src="js/Notes.js"></script> 
- 
-</body> 
- 
+</body>  
 </html>
+<!-- Footer --> 
+<!-- <footer> 
+<div class="container"> 
+<div class="row"> 
+<div> 
+<p class="copyright">Copyright &copy; CMYKpixels 2016</p> 
+</div> 
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+<ul class="list-inline text-center"> 
+<li> 
+<a href="#"> 
+<span class="fa-stack fa-lg"> 
+<i class="fa fa-circle-thin fa-stack-2x"></i> 
+<i class="fa fa-twitter fa-stack-1x "></i> 
+</span> 
+</a> 
+</li> 
+<li> 
+<a href="#"> 
+<span class="fa-stack fa-lg"> 
+<i class="fa fa-circle-thin fa-stack-2x"></i> 
+<i class="fa fa-facebook fa-stack-1x"></i> 
+</span> 
+</a> 
+</li> 
+<li> 
+<a href="#"> 
+<span class="fa-stack fa-lg"> 
+<i class="fa fa-circle-thin fa-stack-2x"></i> 
+<i class="fa fa-github fa-stack-1x"></i> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</div> 
+</div> 
+</div> 
+</footer>-->

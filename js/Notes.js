@@ -3,7 +3,10 @@ var Note = function(title,content) {
     this.content = content;
 }
 
-
+User.prototype.addNote = function(title, content) {
+	var note = new Note (title, content);
+	this.notes.push(note);
+}
 
 
 //mainUser.addNote(note);
