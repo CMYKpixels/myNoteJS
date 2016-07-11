@@ -3,19 +3,23 @@
 <head> 
     <meta charset="utf-8"> 
     <title>JavaScript Note App</title> 
+   
     <!-- Bootstrap Core CSS --> 
     <link href="css/bootstrap.min.css" rel="stylesheet"> 
     <!-- Custom CSS --> 
     <link href="css/clean-blog.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="cover.css"> 
+    <link rel="stylesheet" href="css/dependencies/cover.css"> 
 <!--<link rel="stylesheet" href="signin.css">--> 
     <link rel="stylesheet" href="css/style.css"> 
+  
+
     <!-- Custom Fonts --> 
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <script src="http://use.edgefonts.net/lora:i4,i7,n7,n4:all;open-sans:n7,i7,n8,i8,i4,n3,i3,n4,n6,i6:all.js"></script> 
 </head> 
+
 <body> 
 <div id="appContainer" class="container"> 
 <div id="onePage" class="row"> 
@@ -44,9 +48,9 @@
         <input type="text" id="username" class="form-control" placeholder="username" required autofocus> 
         <label for="password" class="sr-only">Password</label> 
         <input type="password" id="password" class="form-control" placeholder="password" required> 
-        <label> 
+       <!--  <label> 
             <input type="checkbox" value="remember-me"> Remember me 
-        </label> 
+        </label>  -->
         <br/> 
         <button id="connect" class="btn btn-lg btn-success" type="submit">Sign in</button> 
     </form> 
@@ -65,20 +69,30 @@
 
 <!--Note Writing--> 
 <div id="writeNote" class="container"> 
-    <div class="row"> 
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
-            <input id="title" type="text" class="form-control" placeholder="Title"> 
-            <br/> 
-            <textarea id="content" class="form-control" rows="5"></textarea> 
-        </div> 
+<div class="row"> 
+    <form class="form-horizontal"> 
+        <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="title">Title</label>
+            <div class="col-sm-10">
+            <input class="form-control" type="text" id="title" placeholder="Title">
+            </div>
+        </div>
+            <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label" for="content">Content</label>
+                <div class="col-sm-10">
+                <input id="content" type="text" class="form-control" placeholder="Content"> 
+                </div>
+        </div>
+    </form>
+</div> 
 <!--validator--> 
-        <ul class="pager"> 
+        <!-- <ul class="pager">  -->
             <li class="next" class="addNote">  
             </li> 
         </ul> 
         <button class="btn btn-lg" id="addNote" href="#">Ajouter &rarr;</button>
     </div> 
-</div> 
+<!-- </div>  -->
 </header> 
 
 </div> 
